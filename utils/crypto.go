@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-func Enctryption(plainText string) string {
+func Encrypt(plainText string) string {
 	secret := os.Getenv("SECRET")
 	aes, err := aes.NewCipher([]byte(secret))
 
@@ -35,7 +35,7 @@ func Enctryption(plainText string) string {
 	return base64.StdEncoding.EncodeToString(cipherText)
 }
 
-func Decryption(cipherText string) string {
+func Decrypt(cipherText string) string {
 	secret := os.Getenv("SECRET")
 	aes, err := aes.NewCipher([]byte(secret))
 

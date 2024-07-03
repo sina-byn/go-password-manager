@@ -20,19 +20,19 @@ func main() {
 	db := db.ConnectDB()
 	defer db.Close()
 
-	enc := utils.Enctryption("password")
+	enc := utils.Encrypt("password")
 
 	fmt.Println(enc)
 
-	dec := utils.Decryption(enc)
+	dec := utils.Decrypt(enc)
 
 	fmt.Println(dec)
 
-	enc_ := utils.Enctryption("password")
+	enc_ := utils.Encrypt("password")
 
 	fmt.Println(enc_)
 
-	_dec := utils.Decryption(enc_)
+	_dec := utils.Decrypt(enc_)
 
 	fmt.Println(_dec)
 }
