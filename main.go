@@ -5,6 +5,8 @@ import (
 	"log"
 
 	"github.com/joho/godotenv"
+
+	"github.com/sina-byn/go-password-manager/utils"
 )
 
 func main() {
@@ -16,19 +18,19 @@ func main() {
 
 	ConnectDB()
 
-	enc := Enctryption("password")
+	enc := utils.Enctryption("password")
 
 	fmt.Println(enc)
 
-	dec := Decryption(enc)
+	dec := utils.Decryption(enc)
 
 	fmt.Println(dec)
 
-	enc_ := Enctryption("password")
+	enc_ := utils.Enctryption("password")
 
 	fmt.Println(enc_)
 
-	_dec := Decryption(enc_)
+	_dec := utils.Decryption(enc_)
 
 	fmt.Println(_dec)
 }
