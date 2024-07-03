@@ -17,7 +17,8 @@ func main() {
 		log.Fatalf(err.Error())
 	}
 
-	db.ConnectDB()
+	db := db.ConnectDB()
+	defer db.Close()
 
 	enc := utils.Enctryption("password")
 
