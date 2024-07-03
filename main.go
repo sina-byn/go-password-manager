@@ -6,6 +6,7 @@ import (
 
 	"github.com/joho/godotenv"
 
+	"github.com/sina-byn/go-password-manager/db"
 	"github.com/sina-byn/go-password-manager/utils"
 )
 
@@ -16,7 +17,7 @@ func main() {
 		log.Fatalf(err.Error())
 	}
 
-	ConnectDB()
+	db.ConnectDB()
 
 	enc := utils.Enctryption("password")
 
