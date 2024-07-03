@@ -14,6 +14,8 @@ func main() {
 		log.Fatalf(err.Error())
 	}
 
+	ConnectDB()
+
 	enc := Enctryption("password")
 
 	fmt.Println(enc)
